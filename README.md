@@ -110,4 +110,10 @@ lease without the fence, 78 tests passed over it, and a cross-model review
 caught it — every one of those tests settled an order from its *current* owner,
 so none covered a write from a superseded one.
 
+## Related
+
+**[10 ways your AI feature breaks in production](https://gg5533.github.io/checklist.html)** — the full production-readiness checklist this bug came out of. Free, no signup.
+
+**[ai-review-gate](https://github.com/GG5533/ai-review-gate)** — the cross-model review setup that caught this bug.
+
 MIT.
