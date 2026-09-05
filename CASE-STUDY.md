@@ -1,4 +1,8 @@
-# A lease that passed 78 tests and still lost a customer's order
+# A lease that passed 78 tests and would have lost a customer's order
+
+**Caught in review, before it shipped.** This code never ran in production — the
+failure below is what it *would* have done, demonstrated by a test that
+reproduces it.
 
 A payment fulfilment race condition: what it was, how it hid from a full test
 suite, and what it would have cost.
@@ -29,7 +33,9 @@ the provider and stop a call that is already in flight.**
 Attempt B does the job correctly. Then attempt A's dead call finally throws,
 and its failure lands *on top of* B's success.
 
-## What it costs
+## What it would have cost
+
+Had this shipped:
 
 1. The customer's delivered product disappears from their order page and is
    replaced with "we couldn't issue this".
