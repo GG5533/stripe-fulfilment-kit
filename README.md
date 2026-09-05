@@ -11,6 +11,9 @@ don't deliver twice, charge twice, or lose an order that was already paid for.
 npm install && npm test     # 59 tests, no network, no Stripe account needed
 ```
 
+**Full write-up of the bug, how 78 tests missed it, and the fix:**
+[CASE-STUDY.md](CASE-STUDY.md)
+
 ## The bug this exists to prevent
 
 Provisioning takes ownership of an order with a two-minute lease, so two
