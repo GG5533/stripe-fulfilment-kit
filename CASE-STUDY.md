@@ -100,6 +100,13 @@ a file written before fencing gains claim_id without losing its orders
 
 78 tests before. 92 after.
 
+Those two counts are from the private application the bug was found in, measured
+at the fencing commit and its parent — `npm test` reports 78 at `8af9281~1` and 92
+at `8af9281`. This repository is a standalone extraction of the store and webhook,
+so its own suite is smaller (59 at the time of writing); the fencing tests listed
+above are all present here. If you clone this and see a different number from the
+two above, that is why — check the list, not the total.
+
 ## How it was found
 
 Cross-model review. A second model (OpenAI Codex) was run over the code as an
